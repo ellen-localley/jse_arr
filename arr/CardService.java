@@ -4,7 +4,7 @@ public class CardService {
 	private CardBean[] cards;
 	private int count;
 
-	public CardService() {
+	public CardService() {// 인스턴스 초기화
 		cards = new CardBean[3];
 		count = 0;
 	}
