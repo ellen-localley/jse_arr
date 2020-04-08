@@ -34,7 +34,7 @@ public class Engine {
 			case "3":
 				for (int i = 0; i < 3; i++) {
 					String[] values = JOptionPane.showInputDialog("전화번호,이름,회사를 입력하세요").split(",");
-					service.addCelPhone(new CelPhone(values[0], values[1], values[2], true));
+					service.add(new CelPhone(values[0], values[1], values[2], true));
 				}
 				break;
 
@@ -54,7 +54,7 @@ public class Engine {
 			case "5":
 				for (int i=0;i<3;i++) {
 					String[] values = JOptionPane.showInputDialog("전화번호,이름,회사,휴대,검색가능여부를 입력하세요").split(",");
-					service.addIphone(new Iphone(values[0], values[1], values[2], true, values[4]));
+					service.add(new Iphone(values[0], values[1], values[2], true, values[4]));
 				}
 				break;
 				
@@ -76,7 +76,7 @@ public class Engine {
 			case "7":
 				for (int i=0;i<3;i++) {
 					String[] values = JOptionPane.showInputDialog("전화번호,이름,회사,휴대,검색,사이즈를 입력하세요").split(",");
-					service.addGalxyNote(new GalaxyNote(values[0], values[1], values[2], true, values[4], values[5]));
+					service.add(new GalaxyNote(values[0], values[1], values[2], true, values[4], values[5]));
 				}
 				break;
 				
