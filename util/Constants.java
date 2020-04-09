@@ -8,5 +8,7 @@ public class Constants {
 	public final static String CELPHONE_MENU="전화번호,이름,회사,휴대여부를 입력하세요";
 	public final static String IPHONE_MENU="전화번호,이름,회사,휴대,검색가능여부를 입력하세요";
 	public final static String GALAXY_NOTE_MENU="전화번호,이름,회사,휴대,검색,사이즈를 입력하세요";
+	public final static String GRADE_MENU="0.종료   1.성적표입력   2.성적표출력   3.성적순위";
+	public final static String GRADE_INPUT="이름,국어,영어,수학 입력";
 }
 

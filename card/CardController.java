@@ -1,8 +1,8 @@
-package com.jse.arr;
+package com.jse.card;
 
 import java.util.Scanner;
 
-public class Main {
+public class CardController {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		CardService service = new CardService();

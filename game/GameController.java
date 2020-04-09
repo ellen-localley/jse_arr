@@ -1,15 +1,16 @@
-package com.jse.app;
+package com.jse.game;
 import java.util.Random;
 import java.util.Scanner;
-public class Engine {
+import com.jse.member.MemberBean;
+import com.jse.member.Kaup;
+import com.jse.util.Calculator;
+public class GameController {
 	
 	public static void main(String[] args) {
-		
+		Random random = new Random();
 		Scanner scanner=new Scanner(System.in);
-		Member member=new Member();
 		Calculator calculator=null;
 		Dice dice=null;
-		Random random=null;
 		RPSGame rpsGame=null;
 		Kaup kaup=null;
 	
@@ -27,21 +28,21 @@ public class Engine {
 			
 			case 1: System.out.println("회원가입");
 				System.out.println("아이디 입력");
-				member.setId(scanner.next());
+//				member.setId(scanner.next());
 				break;
 				
 			case 2: 
 				System.out.println("로그인");
 				System.out.println("아이디 입력");
 				String id2=scanner.next();
-				String returnId=member.getId();
-				System.out.println("로그인된 아이디: "+returnId);
-				if(id2.equals(returnId)) {
-					System.out.println("로그인 성공");
-				}else {
-					System.out.println("로그인 실패");
-				}
-				break;
+//				String returnId=member.getId();
+//				System.out.println("로그인된 아이디: "+returnId);
+//				if(id2.equals(returnId)) {
+//					System.out.println("로그인 성공");
+//				}else {
+//					System.out.println("로그인 실패");
+//				}
+//				break;
 				
 			case 3:
 				calculator=new Calculator();

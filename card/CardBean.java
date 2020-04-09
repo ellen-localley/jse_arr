@@ -1,4 +1,4 @@
-package com.jse.arr;
+package com.jse.card;
 
 public class CardBean {
 	private String kind;

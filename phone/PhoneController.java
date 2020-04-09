@@ -1,10 +1,10 @@
-package com.jse.inheritance;
+package com.jse.phone;
 
 import javax.swing.JOptionPane;
 
 import com.jse.util.Constants;
 
-public class Engine {
+public class PhoneController {
 	
 	public static void main(String[] args) {
 		PhoneService service = new PhoneService();
