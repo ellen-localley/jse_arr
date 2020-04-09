@@ -16,5 +16,9 @@ public class Iphone extends CelPhone{
 		this.search = search;
 	}
 	
-	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString() + ", search = "+search;
+	}
 }

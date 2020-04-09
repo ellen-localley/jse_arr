@@ -29,6 +29,10 @@ public class CelPhone extends Phone {
 	public void setMove(String move) {
 		this.move = move;
 	}
-	
+
+	@Override
+	public String toString() {
+		return super.toString() + ", move = "+move;
+	}
 	
 }
