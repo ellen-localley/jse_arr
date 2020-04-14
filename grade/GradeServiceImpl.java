@@ -6,7 +6,7 @@ public class GradeServiceImpl implements GradeService {
 	private int count;
 
 	public GradeServiceImpl() {
-		grades = new Grade[3];
+		grades = new Grade[5];
 		count = 0;
 	}
 
@@ -40,12 +40,12 @@ public class GradeServiceImpl implements GradeService {
 
 	@Override
 	public int total(Grade grade) {
-		return grade.getKor() + grade.getEng() + grade.getMath();
+		return grade.getKor() + grade.getEng() + grade.getMath() + grade.getJava();
 	}
 
 	@Override
 	public int avg(Grade grade) {
-		return total(grade) / 3;
+		return total(grade) / 4;
 	}
 
 	@Override
@@ -71,8 +71,8 @@ public class GradeServiceImpl implements GradeService {
 	@Override
 	public String printGrades() {
 		String result = "";
-		for (int i = 0; i < 3; i++) {
-			Grade[] grades = getGrades();
+		Grade[] grades = getGrades();
+		for (int i = 0; i < 5; i++) {
 			result += String.format("[%s : 총점 %d 점, 평균 %d 점,학점 : %s]", 
 					grades[i].getName(), 
 					total(grades[i]),
@@ -82,4 +82,37 @@ public class GradeServiceImpl implements GradeService {
 		return result;
 	}
 
+	@Override
+	public String ranking() {
+		int a = total(grades[0]);
+		int y = total(grades[1]);
+		int z = total(grades[2]);
+		if (a > y && a>z) {
+			if (y > z ) {
+				System.out.println("1등 :" + grades[0].getName() + " 2등:" + grades[1].getName() + " 3등:"
+						+ grades[2].getName());
+			} else if (z > y) {
+				System.out.println("1등 :" + grades[0].getName() + " 2등:" + grades[2].getName() + " 3등:"
+						+ grades[1].getName());
+			}
+		} else if (y > a && y>z) {
+			if (a > z) {
+				System.out.println("1등 :" + grades[1].getName() + " 2등:" + grades[0].getName() + " 3등:"
+						+ grades[2].getName());
+			} else if (z > a) {
+				System.out.println("1등 :" + grades[1].getName() + " 2등:" + grades[2].getName() + " 3등:"
+						+ grades[0].getName());
+			}
+		} else if (z > y && z>a) {
+			if (y > a) {
+				System.out.println("1등 :" + grades[2].getName() + " 2등:" + grades[1].getName() + " 3등:"
+						+ grades[0].getName());
+			} else if (a > y) {
+				System.out.println("1등 :" + grades[2].getName() + " 2등:" + grades[0].getName() + " 3등:"
+						+ grades[1].getName());
+		
+			}
+		}
+		return null;
+	}
 }

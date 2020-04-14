@@ -19,8 +19,12 @@ public class GradeController {
 					gradeService.add(grade);
 				}
 				break;
-			case "2": System.out.println(gradeService.printGrades());break;
-			case "3": break;
+			case "2": 
+				JOptionPane.showMessageDialog(null, gradeService.printGrades());
+				break;
+			case "3": 
+				JOptionPane.showMessageDialog(null, gradeService.ranking());
+				break;
 			}
 		}
 	}

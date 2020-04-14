@@ -1,11 +1,8 @@
 package com.jse.game;
-import java.util.Scanner;
-import java.util.Random;
 
 public class Dice {
 	private String expect;
 	private int com;
-	private String result;
 	
 	public void setExpect(String expect) {
 		this.expect=expect;
@@ -24,7 +21,6 @@ public class Dice {
 	}
 	
 	public String switchDice() {
-		String result="";
 		String result2="";
 		return result2;
 	}

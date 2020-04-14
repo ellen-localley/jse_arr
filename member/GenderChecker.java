@@ -1,13 +1,12 @@
 package com.jse.member;
-import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 public class GenderChecker {
 	public static void main(String[] args) {
 		find();
 	}
 	static void find() {
-		System.out.println("주민번호를 입력하세요");
-		Scanner scanner=new Scanner(System.in);
-		String ssn=scanner.next();
+		String ssn = JOptionPane.showInputDialog("주민번호를 입력하세요");
 		System.out.println(ssn);
 		char ch=ssn.charAt(7);
 		String result="잘못입력한 값";

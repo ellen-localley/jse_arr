@@ -1,7 +1,9 @@
 package com.jse.game;
 import java.util.Random;
 import java.util.Scanner;
-import com.jse.member.MemberBean;
+
+import javax.swing.JOptionPane;
+
 import com.jse.member.Kaup;
 import com.jse.util.Calculator;
 public class GameController {
@@ -15,26 +17,18 @@ public class GameController {
 		Kaup kaup=null;
 	
 		while(true) {
-			System.out.println("0.종료   "
-					+ "1.회원가입   "
-					+ "2.로그인   "
-					+ "3.계산기   "
-					+ "4.주사위 홀짝 맞추기 게임   "
-					+ "5.1부터 100까지의 합   "
-					+ "6.가위바위보   "
-					+ "7.카우프지수");
-			switch(scanner.nextInt()) {
-			case 0: System.out.println("종료"); return;
+			switch(JOptionPane.showInputDialog("0.종료   1.회원가입   2.로그인   3.계산기  4.주사위 홀짝 맞추기 게임   5.1부터 100까지의 합   6.가위바위보   7.카우프지수")) {
+			case "0": return;
 			
-			case 1: System.out.println("회원가입");
-				System.out.println("아이디 입력");
+			case "1": 
+				JOptionPane.showInputDialog("아이디 입력");
 //				member.setId(scanner.next());
 				break;
 				
-			case 2: 
+			case "2": 
 				System.out.println("로그인");
 				System.out.println("아이디 입력");
-				String id2=scanner.next();
+//				String id2=scanner.next();
 //				String returnId=member.getId();
 //				System.out.println("로그인된 아이디: "+returnId);
 //				if(id2.equals(returnId)) {
@@ -44,20 +38,18 @@ public class GameController {
 //				}
 //				break;
 				
-			case 3:
+			case "3":
 				calculator=new Calculator();
 				System.out.println("계산기");
 				System.out.println("첫번째 수 입력");
 				calculator.setNum1(scanner.nextInt());
 				System.out.println("두번째 수 입력");
 				calculator.setNum2(scanner.nextInt());
-				int returnNum1=calculator.getNum1();
-				int returnNum2=calculator.getNum2();
 				int c=calculator.calculator();
 				System.out.println("두 수의 합 "+c);
 				break;
 				
-			case 4:
+			case "4":
 				dice=new Dice();
 				random=new Random();
 				System.out.println("*** 주사위 홀짝 맞추기 게임 ***");
@@ -82,10 +74,10 @@ public class GameController {
 				System.out.println(String.format("매칭 결과: %s", result2));
 				break;
 				
-			case 5: ;
+			case "5":
 				break;
 				
-			case 6:
+			case "6":
 				rpsGame=new RPSGame();
 				System.out.println("1.가위   2.바위   3.보   를 입력하세요");
 				int user=scanner.nextInt();
@@ -97,7 +89,7 @@ public class GameController {
 				rpsGame.game();
 				break;
 			
-			case 7:
+			case "7":
 				kaup=new Kaup();
 				System.out.println("키(cm)를 입력하세요");
 				kaup.setHeight(scanner.nextDouble());
