@@ -21,7 +21,7 @@ public class CardController {
 
 				break;
 			case "2": 
-				Card[] cards = service.getCards();
+				Card[] cards = service.list();
 				message = "";
 				for (int i = 0; i < 3; i++) {
 					message += cards[i].toString()+"\n";

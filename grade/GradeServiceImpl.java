@@ -11,28 +11,6 @@ public class GradeServiceImpl implements GradeService {
 	}
 
 	@Override
-	public void setGrades(Grade[] grades) {
-		this.grades = grades;
-
-	}
-
-	@Override
-	public Grade[] getGrades() {
-		return grades;
-	}
-
-	@Override
-	public void setCount(int count) {
-		this.count = count;
-
-	}
-
-	@Override
-	public int getCount() {
-		return count;
-	}
-
-	@Override
 	public void add(Grade grade) {
 		grades[count] = grade;
 		count++;
@@ -68,51 +46,53 @@ public class GradeServiceImpl implements GradeService {
 		return result;
 	}
 
+//	@Override
+//	public String printGrades() {
+//		String result = "";
+//		Grade[] grades = getGrades();
+//		for (int i = 0; i < 5; i++) {
+//			result += String.format("[%s : 총점 %d 점, 평균 %d 점,학점 : %s]", 
+//					grades[i].getName(), 
+//					total(grades[i]),
+//					avg(grades[i]), 
+//					record(grades[i]));
+//		}
+//		return result;
+//	}
+
 	@Override
-	public String printGrades() {
-		String result = "";
-		Grade[] grades = getGrades();
-		for (int i = 0; i < 5; i++) {
-			result += String.format("[%s : 총점 %d 점, 평균 %d 점,학점 : %s]", 
-					grades[i].getName(), 
-					total(grades[i]),
-					avg(grades[i]), 
-					record(grades[i]));
-		}
-		return result;
+	public Grade[] list() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Grade detail(Grade grade) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int count() {
+		// TODO Auto-generated method stub
+		return count;
+	}
+
+	@Override
+	public void update(Grade grade) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(Grade grade) {
+		// TODO Auto-generated method stub
+
 	}
 
 	@Override
 	public String ranking() {
-		int a = total(grades[0]);
-		int y = total(grades[1]);
-		int z = total(grades[2]);
-		if (a > y && a>z) {
-			if (y > z ) {
-				System.out.println("1등 :" + grades[0].getName() + " 2등:" + grades[1].getName() + " 3등:"
-						+ grades[2].getName());
-			} else if (z > y) {
-				System.out.println("1등 :" + grades[0].getName() + " 2등:" + grades[2].getName() + " 3등:"
-						+ grades[1].getName());
-			}
-		} else if (y > a && y>z) {
-			if (a > z) {
-				System.out.println("1등 :" + grades[1].getName() + " 2등:" + grades[0].getName() + " 3등:"
-						+ grades[2].getName());
-			} else if (z > a) {
-				System.out.println("1등 :" + grades[1].getName() + " 2등:" + grades[2].getName() + " 3등:"
-						+ grades[0].getName());
-			}
-		} else if (z > y && z>a) {
-			if (y > a) {
-				System.out.println("1등 :" + grades[2].getName() + " 2등:" + grades[1].getName() + " 3등:"
-						+ grades[0].getName());
-			} else if (a > y) {
-				System.out.println("1등 :" + grades[2].getName() + " 2등:" + grades[0].getName() + " 3등:"
-						+ grades[1].getName());
-		
-			}
-		}
+		// TODO Auto-generated method stub
 		return null;
 	}
 }

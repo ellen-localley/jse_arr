@@ -12,7 +12,7 @@ public class GameController {
 		Random random = new Random();
 		Scanner scanner=new Scanner(System.in);
 		Calculator calculator=null;
-		Dice dice=null;
+		Game dice=null;
 		RPSGame rpsGame=null;
 		Kaup kaup=null;
 	
@@ -50,7 +50,7 @@ public class GameController {
 				break;
 				
 			case "4":
-				dice=new Dice();
+				dice=new Game();
 				random=new Random();
 				System.out.println("*** 주사위 홀짝 맞추기 게임 ***");
 				System.out.println("기대하는 값 홀/짝을 입력해주세요");

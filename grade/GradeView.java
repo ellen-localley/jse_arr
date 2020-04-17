@@ -158,7 +158,7 @@ public class GradeView extends JFrame implements ActionListener{
 				gradeService.add(grades[i]);
 			}
 		}else if(e.getSource() == listButton) {
-			Grade[] grades = gradeService.getGrades();
+			Grade[] grades = gradeService.list();
 			String result = "";
 			for(int i=0;i<grades.length;i++) {
 				result += String.format("[%s : 총점 %d 점, 평균 %d 점,학점 : %s]\n", 

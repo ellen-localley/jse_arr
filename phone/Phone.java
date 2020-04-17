@@ -1,55 +1,18 @@
 package com.jse.phone;
 
+import lombok.Data;
+
+@Data
 public class Phone {
-	private String phoneNumber,name,company;
-
-	public Phone(String phoneNumber, String name, String company) {
-		this.phoneNumber = phoneNumber;
-		this.name = name;
-		this.company = company;
-	}
-
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
-
-	public String getPhoneNumber() {
-		return phoneNumber;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setCompany(String company) {
-		this.company = company;
-	}
-
-	public String getCompany() {
-		return company;
-	}
-
-	@Override
-	public String toString() {
-		return "phoneNumber=" + phoneNumber + ", name=" + name + ", company=" + company;
-	}
-	
-	
+	private String phoneNumber, name, company;
 }
-
-
 
 class CelPhone extends Phone {
 	private boolean portable;
 	private String move;
 
-	public CelPhone(String phoneNumber, String name, 
-			String company, boolean portable) {
-		super(phoneNumber, name, company);
+	public CelPhone(String phoneNumber, String name, String company, boolean portable) {
+//		super(phoneNumber, name, company);
 		setPortable(portable);
 	}
 
@@ -71,21 +34,19 @@ class CelPhone extends Phone {
 
 	@Override
 	public String toString() {
-		return super.toString() + ", move = "+move;
+		return super.toString() + ", move = " + move;
 	}
-	
+
 }
 
-
-
-class Iphone extends CelPhone{
+class Iphone extends CelPhone {
 	private String search;
-	
+
 	public Iphone(String phoneNumber, String name, String company, boolean portable, String search) {
 		super(phoneNumber, name, company, portable);
 		this.search = search;
 	}
-	
+
 	public String getSearch() {
 		return search;
 	}
@@ -93,18 +54,18 @@ class Iphone extends CelPhone{
 	public void setSearch(String search) {
 		this.search = search;
 	}
-	
+
 	@Override
 	public String toString() {
-		return super.toString() + ", search = "+search;
+		return super.toString() + ", search = " + search;
 	}
 }
 
-
-class GalaxyNote extends Iphone{
+class GalaxyNote extends Iphone {
 	private String bigSize;
 
-	public GalaxyNote(String phoneNumber, String name, String company, boolean portable, String search, String bigSize) {
+	public GalaxyNote(String phoneNumber, String name, String company, boolean portable, String search,
+			String bigSize) {
 		super(phoneNumber, name, company, portable, search);
 		this.bigSize = bigSize;
 	}
@@ -119,8 +80,7 @@ class GalaxyNote extends Iphone{
 
 	@Override
 	public String toString() {
-		return super.toString() + ", bigSize = "+bigSize;
+		return super.toString() + ", bigSize = " + bigSize;
 	}
-	
-	
+
 }

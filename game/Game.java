@@ -1,6 +1,6 @@
 package com.jse.game;
 
-public class Dice {
+public class Game {
 	private String expect;
 	private int com;
 	

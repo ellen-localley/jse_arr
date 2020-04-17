@@ -7,7 +7,7 @@ import com.jse.util.Constants;
 public class PhoneController {
 	
 	public static void main(String[] args) {
-		PhoneService service = new PhoneService();
+		PhoneService service = new PhoneServiceImpl();
 		String message = "";
 		System.out.println(service.toString());
 		while (true) {
@@ -17,13 +17,13 @@ public class PhoneController {
 				return;
 			case "1":
 				for (int i = 0; i < 3; i++) {
-					String[] values = JOptionPane.showInputDialog(Constants.PHONE_MUNU).split(",");
-					service.add(new Phone(values[0], values[1], values[2]));
+//					String[] values = JOptionPane.showInputDialog(Constants.PHONE_MENU).split(",");
+//					service.add(new Phone(values[0], values[1], values[2]));
 				}
 				break;
 
 			case "2":
-				Phone[] phones = service.getPhones();
+				Phone[] phones = service.phoneList();
 				message = "";
 				for (int i = 0; i < 3; i++) {
 					message += phones[i].toString()+"\n";
@@ -39,7 +39,7 @@ public class PhoneController {
 				break;
 
 			case "4":
-				CelPhone[] celPhones = service.getCelPhones();
+				CelPhone[] celPhones = service.celPhoneList();
 				message = "";
 				for (int i = 0; i < 3; i++) {
 					message += celPhones[i].toString()+"\n";
@@ -55,7 +55,7 @@ public class PhoneController {
 				break;
 				
 			case "6":
-				Iphone[] iPhones = service.getIphones();
+				Iphone[] iPhones = service.iphoneList();
 				message = "";
 				for (int i=0; i<3; i++) {
 					message += iPhones[i].toString()+"\n";
@@ -72,7 +72,7 @@ public class PhoneController {
 				break;
 				
 			case "8":
-				GalaxyNote[] galaxyNotes = service.getGalaxyNotes();
+				GalaxyNote[] galaxyNotes = service.galaxyNoteList();
 				message = "";
 				for (int i=0;i<3;i++) {
 					message += galaxyNotes[i].toString()+"\n";
